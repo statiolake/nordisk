@@ -45,17 +45,17 @@ let s:col00 = "#252a33"		" blackish 1
 let s:col01 = "#38404d"		" blackish 2
 let s:col02 = "#4a5466"		" blackish 3
 let s:col03 = "#5e6b81"		" blackish 4
-let s:col04 = "#6f7e98"		" blackish 5
+let s:col04 = "#5f6e88"		" blackish 5
 let s:col05 = "#d7dbe2"		" whitish 1
 let s:col06 = "#ffffff"		" whitish 2
 let s:col07 = "#8fbcbb"		" light blue 1
 let s:col08 = "#81a1c1"		" light blue 3
 let s:col09 = "#88c0d0"		" light blue 2
-let s:col10 = "#5e81ac"		" light blue 4
-let s:col11 = "#a3be8c"		" green
-let s:col12 = "#b48ead"		" purple
+let s:col10 = "#6ea0bc"		" light blue 5
+let s:col11 = "#a3be9c"		" green
+let s:col12 = "#b99ead"		" purple
 let s:col13 = "#eccf95"		" yellow
-let s:col14 = "#d18a75"		" orange
+let s:col14 = "#d19a75"		" orange
 let s:col15 = "#bf6971"		" red
 
 " --------------------------------------------------------------------------------------------- >>> -
@@ -68,6 +68,7 @@ call s:hi ("Comment",		s:col04,	s:col00,	"none")
 
 call s:hi ("Normal",		s:col05,	s:col00,	"none")
 call s:hi ("Special",		s:col06,	s:col00,	"none")
+call s:hi ("SpecialKey",	s:col02,	s:col00,	"none")
 
 call s:hi ("Operator",		s:col07,	s:col00,	"none")
 call s:hi ("Identifier",	s:col08,	s:col00,	"none")
@@ -76,14 +77,14 @@ call s:hi ("Constant",		s:col10,	s:col00,	"none")
 call s:hi ("Statement",		s:col11,	s:col00,	"none")
 call s:hi ("Type",			s:col12,	s:col00,	"none")
 
-call s:hi ("Cursor",		"",			"",			"inverse")
+call s:hi ("Cursor",		"fg",		"bg",		"inverse")
 call s:hi ("DiffAdd",		s:col11,	s:col00,	"none")
 call s:hi ("DiffChange",	s:col13,	s:col00,	"none")
 call s:hi ("DiffDelete",	s:col15,	s:col00,	"none")
 call s:hi ("Error",			s:col00,	s:col15,	"none")
 call s:hi ("ModeMsg",		s:col06,	s:col00,	"bold")
 call s:hi ("Pmenu",			s:col05,	s:col01,	"none")
-call s:hi ("Search",		s:col14,	"bg",		"none")
+call s:hi ("Search",		s:col14,	"bg",		"underline")
 call s:hi ("StatusLine",	s:col06,	s:col10,	"bold")
 call s:hi ("StatusLineNC",	s:col00,	s:col05,	"none")
 call s:hi ("Todo",			s:col14,	s:col00,	"none")
@@ -132,7 +133,6 @@ hi! link Repeat			Statement
 hi! link SignColumn		FoldColumn
 hi! link SpecialChar	Special
 hi! link SpecialComment	Special
-hi! link SpecialKey		Special
 hi! link SpellBad		Error
 hi! link SpellCap		Error
 hi! link SpellLocal		Constant
@@ -202,6 +202,15 @@ hi! link vimFuncKey		Type
 hi! link vimOption		Special
 hi! link vimSyntax		Special
 hi! link vimSynType		Special
+hi! link vimSep Normal
+hi! link vimParenSep Normal
+
+" typescript
+hi! link typescriptParens Normal
+hi! link typescriptBraces Normal
+hi! link typescriptEndColons Normal
+hi! link typescriptLogicSymbols Normal
+
 
 " --------------------------------------------------------------------------------------------- >>> -
 
